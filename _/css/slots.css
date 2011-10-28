@@ -1,0 +1,83 @@
+/*reset*/
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video
+																				{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section	{display:block;}
+nav ul																			{list-style:none;}
+a																				{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;}
+.offscreen 																		{position:absolute;left:-50000px;}
+
+@font-face {font-family:'GibsonRegular';src: url('../font/gibson-regular-webfont.eot');src: url('../font/gibson-regular-webfont.eot?#iefix') format('embedded-opentype'),url('../font/gibson-regular-webfont.woff') format('woff'),url('../font/gibson-regular-webfont.ttf') format('truetype'),url('../font/gibson-regular-webfont.svg#GibsonRegular') format('svg');font-weight:normal;font-style:normal;}
+@font-face {font-family:'GibsonSemiBold';src: url('../font/gibson-semibold-webfont.eot');src: url('../font/gibson-semibold-webfont.eot?#iefix') format('embedded-opentype'),url('../font/gibson-semibold-webfont.woff') format('woff'),url('../font/gibson-semibold-webfont.ttf') format('truetype'),url('../font/gibson-semibold-webfont.svg#GibsonSemiBold') format('svg');font-weight:normal;font-style:normal;}
+
+	/*base layout given to all, mobile first ftw*/
+	body 							{font-family:GibsonRegular, Helvetica, Arial, Sans-serif;background-color:#410C1C;color:#8F3B55;padding:0.8em;padding-bottom:1.0em}
+	strong 							{font-family:GibsonSemibold, Helvetica, Arial, Sans-serif;font-weight:normal;}
+	h1, h2, h3, h4					{font-weight:normal;}
+
+	h1 {font-size:2.0em;}
+	h2 {font-size:1.15em;}
+	h3 {font-size:1.7em;}
+	h2, h3 {text-align:center;}
+
+	#set-total, #set-match {
+		width:140px;
+		height:30px;
+		float:left;
+		clear:left;
+		display:block;
+		margin-bottom:0.5em;
+		padding:0.4em;
+		color:#fff;
+		border-radius:0;
+		background-color:rgba(143,59,85,0.2);
+	}
+	
+	hr {clear:both;padding-top:0.5em;border:0;}
+
+	#play {
+		float:right;
+		background:0;
+		border:0;
+		width:120px;
+		height:80px;
+
+		border-radius:12px;
+		-moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+		
+		background-color:rgba(143,59,85,0.5);
+		border:1px dotted rgba(255,255,255,0.7);
+		color:#fff;
+		font-size:2.0em;
+		
+	}
+	#results {list-style:none;}
+	#results li {
+		border:1px solid rgba(143,59,85,0.5);
+		display:block;
+		padding:0.5em;
+		margin-right:0.5em;
+		margin-bottom:0.5em;
+		width:24.6%;
+		float:left;
+		word-wrap: break-word;
+	}
+	#results li.yes {
+		border-color:rgba(255, 255, 255, 0.9);
+		background-color:rgba(255, 255, 255, 0.7);
+	}
+	#results:after {
+		content:'.';
+		visibility:hidden;
+	}
+
+@media screen and (min-width:401px) and (max-width:640px) {/*mobile landscape*/
+	
+}
+
+/*tablet version planned for 2.0*/
+@media screen and (min-width:641px) and (max-width:879px) {/*tablet portrait*/}
+@media screen and (min-width:880px) and (max-width:1090px) {/*tablet lanscape & desktop*/}
+@media screen and (min-width:1091px) {/*hd version*/
+	body {width:960px;margin:0 auto;}
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {/*iPhone 2xImages*/}

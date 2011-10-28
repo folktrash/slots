@@ -2,38 +2,30 @@
 <html lang="en">
 <head id="head">
 	<meta charset="UTF-8">
-	<title>slots proof</title>
+	<title>slots</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
-	<meta name="description" content="Tag Creative">
-	<meta name="keywords" content="Tag,Creative">
-	<meta name="author" content="Tag Creative">
+	<meta name="description" content="slots">
+	<meta name="keywords" content="slots,interview,dumbass">
+	<meta name="author" content="folktrash">
 	<script src="_/js/libs/yepnope.1.0.2.min.js"></script>
-	<!-- ><link href="_/css/tag.css" rel="stylesheet"> -->
+	<link href="_/css/slots.css" rel="stylesheet">
 	<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-	<!--[if (lt IE 9) & (!IEMobile) ]><link rel="stylesheet" href="_/css/ieNO.css"><![endif]-->
+	<!--[if (lt IE 9) & (!IEMobile) ]><link rel="stylesheet" href="_/css/ie.css"><![endif]-->
 </head>
 <body>
-<h1>slots proof</h1>
+	
+<h1><strong>slots</strong></h1>
+<button id="play"><strong>play</strong></button>
+<input id="set-total" type="number" placeholder="total. default: 5">
+<input id="set-match" type="number" placeholder="match. default: 3">
 
-<input id="set-total" type="number" style="width:200px;height:20px;" placeholder="total slots (default: 5)">
-<input id="set-match" type="number" style="width:200px;height:20px;" placeholder="match required (default: 3)">
-<button id="play">play</button>
+
 <hr>
-<table id="results" style="width:200px;">
-	<tr style="border-bottom:2px solid #000;">
-		<td>deal</td>
-		<td>winner?</td>
-	</tr>
-</table>
+
+<ul id="results"></ul>
 
 <script>
-yepnope.errorTimeout = 8000;//custom timeout length. may need to tinker in production
-yepnope([{
-	load: '_/js/libs/jquery.1.6.4.min.js'
-},{
-	load: '_/js/tag.js',
-	complete: function () {TAG.boot();}
-}]);
+yepnope([{load: '_/js/fetch.js',complete: function() {FETCH.boot();}}]);
 </script>
 
 </body>
